@@ -6,4 +6,4 @@ before_install:
  - docker build -t shalama/react-docker -f Dockerfile.dev .
 
 script:
- - docker run -e CI=true shalama/react-docker npm run test -- --coverage 
+ - docker run -e CI=true shalama/react-docker npm run test
