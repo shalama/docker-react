@@ -1,0 +1,9 @@
+sudo: required
+services: 
+ - docker
+
+before_install:
+ - docker build -t shalama/react-docker -f Dockerfile.dev
+
+script:
+ - docker run shalama/react-docker npm run test -- --coverage 
